@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Sample Tests ">
+    <test name = "Browser Tests" enabled="false">
+        <classes>
+            <class name="io.github.mfaisalkhatri.SampleSeleniumTests">
+                <methods>
+                    <include name="testChromeBrowser"/>
+                    <include name="testFirefoxBrowser"/>
+                    <include name="testEdgeBrowser"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "Browser Tests on chrome browser">
+        <classes>
+            <class name="io.github.mfaisalkhatri.SeleniumExampleTests">
+                <parameter name="browser" value="chrome"/>
+                <methods>
+                    <include name="testTitleOfInternetWebsite"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "Browser Tests on firefox browser">
+        <classes>
+            <class name="io.github.mfaisalkhatri.SeleniumExampleTests">
+                <parameter name="browser" value="firefox"/>
+                <methods>
+                    <include name="testTitleOfInternetWebsite"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "Browser Tests on edge browser">
+        <classes>
+            <class name="io.github.mfaisalkhatri.SeleniumExampleTests">
+                <parameter name="browser" value="edge"/>
+                <methods>
+                    <include name="testTitleOfInternetWebsite"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite> <!-- Suite -->
