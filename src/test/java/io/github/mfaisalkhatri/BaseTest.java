@@ -13,6 +13,8 @@ public class BaseTest {
     DriverManager driverManager;
 
     public BaseTest () {
+
+        System.out.println ("Class created!");
         driverManager = new DriverManager ();
     }
 
