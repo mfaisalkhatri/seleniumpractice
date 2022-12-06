@@ -24,25 +24,34 @@ public class FormAuthenticationPage {
     public String subHeader () {
         return driver.findElement (By.tagName ("h4")).getText ();
     }
+
+    private WebElement form() {
+        return driver.findElement (By.id ("content"));
+    }
+
+
     private WebElement passwordField () {
-        return driver.findElement (By.id ("password"));
+        return form().findElement (By.id ("password"));
     }
 
     private WebElement userNameField () {
-        return driver.findElement (By.id ("username"));
+        return form().findElement (By.id ("username"));
     }
 
     private WebElement loginBtn () {
-        return driver.findElement (By.className ("radius"));
+        return form().findElement (By.className ("radius"));
     }
 
-    public void login(String username, String pswd) {
+    public SecurePage login(String username, String pswd) {
         userNameField ().clear ();
         userNameField ().sendKeys (username);
         passwordField ().clear ();
         passwordField ().sendKeys (pswd);
         loginBtn ().click ();
+
+        return new SecurePage (driver);
     }
+
 
 
 }

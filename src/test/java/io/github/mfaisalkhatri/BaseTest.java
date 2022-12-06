@@ -12,15 +12,10 @@ public class BaseTest {
 
     DriverManager driverManager;
 
-    public BaseTest () {
-
-        System.out.println ("Class created!");
-        driverManager = new DriverManager ();
-    }
-
     @Parameters ("browser")
     @BeforeClass
     public void setupTest (String browser) {
+        driverManager = new DriverManager ();
         driverManager.startBrowser (browser);
         driverManager.getDriver ()
             .get ("https://the-internet.herokuapp.com/");

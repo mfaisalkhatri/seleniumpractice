@@ -1,9 +1,11 @@
 package io.github.mfaisalkhatri;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import io.github.mfaisalkhatri.pages.FormAuthenticationPage;
 import io.github.mfaisalkhatri.pages.HomePage;
+import io.github.mfaisalkhatri.pages.SecurePage;
 import org.testng.annotations.Test;
 
 /**
@@ -30,7 +32,9 @@ public class SeleniumExampleTests extends BaseTest {
         String expectedSubHeader = "This is where you can log into the secure area. Enter tomsmith for the username and SuperSecretPassword! for the password. If the information is wrong you should see error messages.";
         assertEquals (formAuthenticationPage.subHeader (), expectedSubHeader);
 
-        formAuthenticationPage.login ("tomsmith","SuperSecretPassword!");
+        SecurePage securePage = formAuthenticationPage.login ("tomsmith","SuperSecretPassword!");
+        //assertEquals (securePage.getFlashMessage (), "You logged into a secure area!\n×");
+        assertTrue (securePage.getFlashMessage ().contains ("You logged into a secure area"));
     }
 
 }

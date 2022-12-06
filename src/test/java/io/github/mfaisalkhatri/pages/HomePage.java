@@ -23,9 +23,9 @@ public class HomePage {
         return driver.getTitle ();
     }
 
-        public void openMenu(String menu) {
-            driver.findElement (By.linkText (menu)).click ();
-        }
+    public void openMenu (String menu) {
+        driver.findElement (By.linkText (menu))
+            .click ();
 
-
+    }
 }
