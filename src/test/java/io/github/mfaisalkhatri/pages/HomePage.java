@@ -26,6 +26,5 @@ public class HomePage {
     public void openMenu (String menu) {
         driver.findElement (By.linkText (menu))
             .click ();
-
     }
 }

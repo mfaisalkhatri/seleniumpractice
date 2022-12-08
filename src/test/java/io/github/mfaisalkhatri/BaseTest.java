@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
  **/
 public class BaseTest {
 
-    DriverManager driverManager;
+   public DriverManager driverManager;
 
     @Parameters ("browser")
     @BeforeClass
