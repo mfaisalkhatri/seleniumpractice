@@ -15,8 +15,12 @@ import org.testng.annotations.Test;
  **/
 public class CheckboxTests extends BaseTest {
 
+
+
     @Test ()
     public void testCheckboxes() {
+        driverManager.getDriver ()
+            .get ("https://the-internet.herokuapp.com/");
         HomePage homePage = new HomePage (driverManager.getDriver ());
         homePage.openMenu ("Checkboxes");
         CheckboxPage checkboxPage = new CheckboxPage(driverManager.getDriver ());

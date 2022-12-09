@@ -13,15 +13,14 @@ public class BaseTest {
    public DriverManager driverManager;
 
     @Parameters ("browser")
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setupTest (String browser) {
         driverManager = new DriverManager ();
         driverManager.startBrowser (browser);
-        driverManager.getDriver ()
-            .get ("https://the-internet.herokuapp.com/");
+
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown () {
         driverManager.stopDriver ();
     }

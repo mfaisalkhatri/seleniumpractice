@@ -16,8 +16,10 @@
     <test name = "Browser Tests on chrome browser">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="io.github.mfaisalkhatri.theinternet.FormAuthenticationTests"/>
-            <class name="io.github.mfaisalkhatri.theinternet.CheckboxTests"/>
+<!--            <class name="io.github.mfaisalkhatri.theinternet.FormAuthenticationTests"/>-->
+<!--            <class name="io.github.mfaisalkhatri.theinternet.CheckboxTests"/>-->
+<!--            <class name="io.github.mfaisalkhatri.theinternet.RadioBtnTests"/>-->
+            <class name="io.github.mfaisalkhatri.theinternet.JSAlertTests"/>
         </classes>
     </test>
 
@@ -34,6 +36,7 @@
             <class name="io.github.mfaisalkhatri.theinternet.FormAuthenticationTests"/>
         </classes>
     </test>
+
 
 
 </suite> <!-- Suite -->

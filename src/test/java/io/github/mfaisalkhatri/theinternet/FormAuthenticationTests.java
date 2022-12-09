@@ -23,6 +23,8 @@ public class FormAuthenticationTests extends BaseTest {
 
     @BeforeClass
     public void testSetup () {
+        driverManager.getDriver ()
+            .get ("https://the-internet.herokuapp.com/");
         homePage = new HomePage (driverManager.getDriver ());
     }
 

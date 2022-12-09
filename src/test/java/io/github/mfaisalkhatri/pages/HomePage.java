@@ -5,7 +5,6 @@ import java.sql.Driver;
 import io.github.mfaisalkhatri.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 /**
  * @author Faisal Khatri

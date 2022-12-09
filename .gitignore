@@ -13,6 +13,7 @@
 /test-output/
 /logs/
 /reports/
+*.png
 
 # Mac OSX
 .DS_Store
