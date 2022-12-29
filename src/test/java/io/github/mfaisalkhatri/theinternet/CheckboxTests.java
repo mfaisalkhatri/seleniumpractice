@@ -15,29 +15,34 @@ import org.testng.annotations.Test;
  **/
 public class CheckboxTests extends BaseTest {
 
-
-
     @Test ()
-    public void testCheckboxes() {
+    public void testCheckboxes () {
         driverManager.getDriver ()
             .get ("https://the-internet.herokuapp.com/");
         HomePage homePage = new HomePage (driverManager.getDriver ());
         homePage.openMenu ("Checkboxes");
-        CheckboxPage checkboxPage = new CheckboxPage(driverManager.getDriver ());
+        CheckboxPage checkboxPage = new CheckboxPage (driverManager.getDriver ());
 
-        String pageHeader = checkboxPage.pageHeader();
-        assertEquals(pageHeader, "Checkboxes");
+        String pageHeader = checkboxPage.pageHeader ();
+        assertEquals (pageHeader, "Checkboxes");
 
-        checkboxPage.checkboxOne().click();
-        assertTrue(checkboxPage.checkboxOne().isSelected());
+        checkboxPage.checkboxOne ()
+            .click ();
+        assertTrue (checkboxPage.checkboxOne ()
+            .isSelected ());
 
-        assertTrue(checkboxPage.checkboxTwo().isSelected());
+        assertTrue (checkboxPage.checkboxTwo ()
+            .isSelected ());
 
-        checkboxPage.checkboxOne().click();
-        assertFalse(checkboxPage.checkboxOne().isSelected());
+        checkboxPage.checkboxOne ()
+            .click ();
+        assertFalse (checkboxPage.checkboxOne ()
+            .isSelected ());
 
-        checkboxPage.checkboxTwo().click();
-        assertFalse(checkboxPage.checkboxOne().isSelected());
+        checkboxPage.checkboxTwo ()
+            .click ();
+        assertFalse (checkboxPage.checkboxOne ()
+            .isSelected ());
     }
 
 }

@@ -14,6 +14,7 @@
 /logs/
 /reports/
 *.png
+*.pdf
 
 # Mac OSX
 .DS_Store
