@@ -10,17 +10,17 @@ import org.testng.annotations.Parameters;
  **/
 public class BaseTest {
 
-   public DriverManager driverManager;
+    public DriverManager driverManager;
 
     @Parameters ("browser")
-    @BeforeClass(alwaysRun = true)
+    @BeforeClass (alwaysRun = true)
     public void setupTest (String browser) {
         driverManager = new DriverManager ();
         driverManager.startBrowser (browser);
 
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterClass (alwaysRun = true)
     public void tearDown () {
         driverManager.stopDriver ();
     }

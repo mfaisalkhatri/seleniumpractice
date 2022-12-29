@@ -32,7 +32,12 @@ public class FormAuthenticationTests extends BaseTest {
     public void testTitleOfInternetWebsite () {
         String title = homePage.getTitle ();
         assertEquals (title, "The Internet");
+        String currentUrl = driverManager.getDriver ().getCurrentUrl ();
+        System.out.println (currentUrl);
+        String pageSource = driverManager.getDriver ().getPageSource ();
+        System.out.println (pageSource);
     }
+
 
     @Test(priority = 1)
     public void testFormAuthentication () {

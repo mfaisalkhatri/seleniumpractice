@@ -23,7 +23,6 @@ public class JSAlertTests extends BaseTest {
         jsAlertPage = new JSAlertPage (driverManager.getDriver ());
     }
 
-
     @Test
     public void alertTest () {
         assertEquals (jsAlertPage.getJSAlertText (), "I am a JS Alert");

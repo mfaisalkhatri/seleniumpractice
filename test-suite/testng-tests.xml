@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testng Sample Tests ">
+    <test name="Test One for before class and before tests annotations" enabled="false">
+        <classes>
+            <class name="io.github.mfaisalkhatri.testng.TestClassOne"/>
+            <class name="io.github.mfaisalkhatri.testng.TestClassTwo"/>
+        </classes>
+    </test>
+    <test name="Test Two for before class and before tests annotations" enabled="true">
+        <classes>
+            <class name="io.github.mfaisalkhatri.testng.TestClassThree"/>
+            <class name="io.github.mfaisalkhatri.testng.TestClassFour"/>
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->
